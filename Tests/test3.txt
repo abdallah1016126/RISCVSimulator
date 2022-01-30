@@ -1,0 +1,14 @@
+LUI a0, 1
+AUIPC a0, 1 
+addi a1,a1,100
+lb t0, 0(a1)
+lbu t0, 0(a1)
+lh t1, 0(a1)
+lhu t1,0(a1)
+lw t2, 0(a1)
+sb t2, 0(a1)
+sh t1, 0(a1)
+sw t0, 0(a1)
+jal zero, EXIT 
+EXIT :
+ebreak

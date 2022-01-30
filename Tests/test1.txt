@@ -1,0 +1,25 @@
+addi s0,s0,5
+addi s1,s1, 10
+loop :
+addi s0,s0, 4
+blt  s0,s1, loop
+loop2 :
+addi s0, s0, -3
+bge s0,s1, loop2
+addi t0,t0, 7
+beq s0,t0, loop2
+
+addi t3, t3, -1
+addi t1, t1, -3
+loop3: addi t1,t1, 1
+bltu t1,t3, loop3
+addi t1,t1, -1
+bgeu t3,t1, loop4
+
+loop4:
+addi t0,t0,1
+
+bne s0,zero, EXIT
+
+EXIT:
+fence
